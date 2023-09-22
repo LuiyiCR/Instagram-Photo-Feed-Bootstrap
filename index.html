@@ -17,37 +17,35 @@
     <title>Instagram Photo Feed</title>
   </head>
   <body>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="row">
-        <div class="col-1">
+    <div class="container-fluid">
+      <nav class="navbar fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#">
           <i class="fa-brands fa-instagram"></i>
-        </div>
-        <div class="col-2">
-          <h4 class="display-5">Instagram</h4>
-        </div>
-        <div class="col">
-          <button class="btn btn-success">Create a new post</button>
-        </div>
-        <div class="dropdown">
+          <span class="mr-1">Instagram</span>
+        </a>
+        <div class="btn-group bord">
+          <button class="btn btn-success rounded" type="button">
+            Create a new post
+          </button>
           <button
-            class="btn btn-secondary dropdown-toggle"
             type="button"
-            id="dropdownMenuButton"
+            class="btn btn-secondary dropdown-toggle ml-2 rounded"
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
-          ></button>
+          >
+            <i class="fa-solid fa-gear"></i>
+          </button>
           <div class="dropdown-menu">
-            <a href="#" class="dropdown-item">Profile</a
-            ><a href="#" class="dropdown-item">Accesibility</a
-            ><a href="#" class="dropdown-item">Privacy and Data</a>
+            <a href="#" class="dropdown-item"> Profile </a>
+            <a href="#" class="dropdown-item"> Accesibility </a>
+            <a href="#" class="dropdown-item"> Privacy and Data </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">Log out</a>
+            <a href="#" class="dropdown-item text-danger">Log out</a>
           </div>
         </div>
-      </div>
+      </nav>
     </div>
-
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
