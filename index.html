@@ -24,32 +24,39 @@
           <i class="fa-brands fa-instagram"></i>
           <span class="mr-1">Instagram</span>
         </a>
+
+        <!-- Create a new post -->
         <div class="btn-group bord">
           <button
-            class="btn btn-success rounded"
+            class="btn btn-success rounded me-2"
             type="button"
-            data-toggle="modal"
-            data-target="#exampleModal"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
           >
             Create a new post
           </button>
 
           <!-- Dropdown-Menu -->
-          <button
-            type="button"
-            class="btn btn-secondary dropdown-toggle ml-2 rounded"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <i class="fa-solid fa-gear"></i>
-          </button>
-          <div class="dropdown-menu">
-            <a href="#" class="dropdown-item"> Profile </a>
-            <a href="#" class="dropdown-item"> Accesibility </a>
-            <a href="#" class="dropdown-item"> Privacy and Data </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item text-danger">Log out</a>
+          <div class="dropdown">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle rounded ms-2"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="dropdownMenuButton"
+            >
+              <li href="#" class="dropdown-item">Profile</li>
+              <li href="#" class="dropdown-item">Accesibility</li>
+              <li href="#" class="dropdown-item">Privacy and Data</li>
+              <div class="dropdown-divider"></div>
+              <li href="#" class="dropdown-item text-danger">Log out</li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -211,12 +218,10 @@
               </h5>
               <button
                 type="button"
-                class="close"
-                data-dismiss="modal"
+                class="btn-close"
+                data-bs-dismiss="modal"
                 aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
+              ></button>
             </div>
             <div class="modal-body">
               <h6>Caption:</h6>
@@ -230,7 +235,7 @@
             <div class="row">
               <div class="col-1 ml-4">
                 <!-- Camera icon box -->
-                <div class="text-left">
+                <div class="text-left ms-4">
                   <a href="#">
                     <i class="fas fa-camera fa-1x"></i>
                   </a>
@@ -239,7 +244,7 @@
               </div>
               <div class="col-1">
                 <!-- Map icon box -->
-                <div class="text-left">
+                <div class="text-left ms-1">
                   <a href="#">
                     <i class="fas fa-map-marker-alt fa-1x"></i>
                   </a>
@@ -248,13 +253,15 @@
               </div>
             </div>
             <div class="modal-footer">
+              <!-- Close-Modal-Button -->
               <button
                 type="button"
                 class="btn btn-secondary"
-                data-dismiss="modal"
+                data-bs-dismiss="modal"
               >
                 Close
               </button>
+              <!-- Publish-Modal-Button -->
               <button type="button" class="btn btn-success">Publish</button>
             </div>
           </div>
@@ -272,12 +279,5 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(document).ready(function () {
-        $('#createnewpostModal').on('shown.bs.modal', function () {
-          $('#createnewpostModal').trigger('focus');
-        });
-      });
-    </script>
   </body>
 </html>
